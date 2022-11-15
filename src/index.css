@@ -3,11 +3,99 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header {
+  height: 70px;
+  box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px calc(50vw - 580px);
+  margin: 0 auto;
+  width: 100%;
+}
+header .name {
+  padding: 23px 22px;
+  line-height: 24px;
+}
+header .navbar {
+  display: flex;
+  list-style: none;
+}
+header .navbar li {
+  padding: 8px 22px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+header .list {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 22px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../public/lukas-blazek-GnvurwJsKaY-unsplash.jpg) no-repeat;;
+  background-size: cover;
+  z-index: -1;
+}
+.home .title {
+  color: #fff;
+  font-size: 44px;
+  position: absolute;
+  left: 40%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.home::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to left top, rgba(102,51,0, 0.8), transparent);
+}
+
+@media screen and (max-width: 580px){
+  header {
+    flex-direction: column; 
+    align-items: flex-start;
+    height: 70px;
+    padding: 0;
+  }
+  header .navbar {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+  header .open {
+    display: flex;
+  }
+  header .navbar {
+    flex-direction: column; 
+    width: 100%; 
+    align-items: center;
+  }
+  header .navbar li {
+    width: 100%; 
+    text-align: center; 
+    border: 1px solid #000;
+  }
+  header .list {display: block;}
 }
