@@ -4,9 +4,11 @@ function Home() {
   return (
     <div className="home">
       <div className="title">
-        안녕하세요. <br /> 
-        프론트엔드 개발자 <br />
-        <strong>이건우</strong> 입니다.
+        <ul className="title-text">
+          <li><span data-text="안녕하세요.">안녕하세요.</span></li>
+          <li><span data-text="프론트엔드 개발자">프론트엔드 개발자</span></li>
+          <li><span data-text="이건우 입니다.">이건우 입니다.</span></li>
+        </ul>
       </div>
     </div>
   );

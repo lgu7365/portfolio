@@ -11,7 +11,7 @@ function Header() {
     <header>
       <div className="name">
         <Link to="home">
-          <div className="header_title">LGU's Portpolio</div>
+          <div className="header_title">Home</div>
         </Link>
       </div>
       <ul className={"navbar" + (btn ? ' open' : '')}>
