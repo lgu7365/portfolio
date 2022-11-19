@@ -143,22 +143,106 @@ header .list {
 .about-contents .about-list .about-list-content .about-list-text {
   margin-top: 20px;
 }
+
 .skills {
   height: 80vh;
-  margin: 0 calc(50vw - 370px);
+  margin: 0 calc(50vw - 420px);
 }
 .skills .skills-title {
   text-align: center;
-  font-size: 36px ;
+  font-size: 36px;
+  margin-bottom: 2em;
+}
+.skills .skills-list {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.skills .skills-list .skills-list-content {
+  box-sizing: border-box;
+  text-align: center;
+}
+.skills .skills-list .skills-list-content:nth-child(1),
+.skills .skills-list .skills-list-content:nth-child(2) {
+  width: 50%;
+  margin-bottom: 3em;
+}
+.skills .skills-list .skills-list-content:nth-child(3),
+.skills .skills-list .skills-list-content:nth-child(4),
+.skills .skills-list .skills-list-content:nth-child(5) {
+  width: 33.3%;
+}
+.skills .skills-list .skills-list-content:nth-child(1),
+.skills .skills-list .skills-list-content:nth-child(3),
+.skills .skills-list .skills-list-content:nth-child(4) {
+  padding-right: 1em;
+}
+.skills .skills-list .skills-list-content i {
+  font-size: 20px;
+}
+.skills .skills-list .skills-list-content span {
+  padding-left: 0.5em;
+  font-size: 20px;
+}
+.skills .skills-list .skills-list-text {
+  padding-top: 0.5em;
+}
+
+.project {
+  height: 80vh;
+  margin: 0 calc(50vw - 420px);
+}
+.project .project-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 2em;
+}
+
+.contact {
+  margin: 0 calc(50vw - 420px);
+}
+.contact .contact-title {
+  text-align: center;
+  font-size: 36px;
+}
+.contact .contact-title h2 {
+  margin-bottom: 0.5em;
+}
+.contact .contact-list {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.contact .contact-list .email,
+.contact .contact-list .phone {
+  margin-bottom: 0.5em;
+}
+.contact .contact-list .email i,
+.contact .contact-list .phone i {
+  margin-right: 0.5em;
+}
+.contact .contact-list .github i {
+  color: #000;
 }
 
 footer {
   background-color: #444;
-  height: 10vh;
+  padding: 1.5em 0;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
 }
 @media screen and (max-width: 1120px){
   .home {
     background-size: contain;
+  }
+}
+@media screen and (max-width: 850px) {
+  .skills {
+    width: 100%;
+    margin: 0;
   }
 }
 @media screen and (max-width: 820px) {
@@ -166,7 +250,7 @@ footer {
     font-size: 40px;
     font-weight: 700;
   }
-  .about {
+  .about, .contact, .project {
     width: 100%;
     margin: 0;
   }
@@ -188,9 +272,18 @@ footer {
   .about-contents .about-list .about-list-content span::before {
     display: none;
   }
-  .skills {
+  .skills .skills-title {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  .skills .skills-list .skills-list-content:nth-child(1),
+  .skills .skills-list .skills-list-content:nth-child(2),
+  .skills .skills-list .skills-list-content:nth-child(3),
+  .skills .skills-list .skills-list-content:nth-child(4),
+  .skills .skills-list .skills-list-content:nth-child(5) {
     width: 100%;
-    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
   }
 }
 

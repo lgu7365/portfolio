@@ -2,8 +2,10 @@ import React from "react";
 
 function Project() {
   return (
-    <div>
-      Project
+    <div className="project">
+      <div className="project-title">
+        <h2>Project</h2>
+      </div>
     </div>
   );
 }
