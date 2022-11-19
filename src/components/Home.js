@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home" id="0">
       <div className="title">
         <ul className="title-text">
           <li><span data-text="안녕하세요.">안녕하세요.</span></li>
